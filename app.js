@@ -11,14 +11,14 @@ app.get("/", (req, res) => {
     res.send(`
         <html>
         <head>
-            <title>User BMBR Microservice</title>
+            <title>BMBR</title>
             <style>
                 body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
                 h1 { color: #007bff; }
             </style>
         </head>
         <body>
-            <h1>Welcome to the title>User BMBR Microservice 🚀</h1>
+            <h1>Welcome to the BMBR api-gateway  🚀</h1>
             <p>Use the API endpoints to retrieve ranking data.</p>
             <p>Try: <code>/cuenta/validar/:id</code> </p>
         </body>
