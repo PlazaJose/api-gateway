@@ -40,7 +40,7 @@ app.use("/restricted-service", (req, res, next) => {
 app.use("/auth", createProxyMiddleware({ target: "https://user-validation-microservice.vercel.app", changeOrigin: true }));
 app.use("/q", createProxyMiddleware({ target: "https://queue-microservice.vercel.app", changeOrigin: true }));
 //app.use("/com", createProxyMiddleware({ target: "https://auth-service.vercel.app", changeOrigin: true }));
-//app.use("/game", createProxyMiddleware({ target: "https://game-service.vercel.app", changeOrigin: true }));
+app.use("/game", createProxyMiddleware({ target: "https://match-microservice.vercel.app", changeOrigin: true }));
 app.use("/rkn", createProxyMiddleware({ target: "https://ranking-microservice.vercel.app", changeOrigin: true }));
 
 app.listen(PORT, () => console.log(`API Gateway running on port ${PORT}`));
