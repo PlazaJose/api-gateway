@@ -19,8 +19,8 @@ app.get("/", (req, res) => {
         </head>
         <body>
             <h1>Welcome to the BMBR api-gateway  🚀</h1>
-            <p>Use the API endpoints to retrieve ranking data.</p>
-            <p>Try: <code>/cuenta/validar/:id</code> </p>
+            <p>Use the API endpoints to retrieve data.</p>
+            <p>Try: <code>/auth/cuenta/validar/:id</code> or <code>/rkn/ranking/top/5</code> </p>
         </body>
         </html>
     `);
@@ -40,6 +40,6 @@ app.use("/auth", createProxyMiddleware({ target: "https://user-validation-micros
 //app.use("/q", createProxyMiddleware({ target: "https://auth-service.vercel.app", changeOrigin: true }));
 //app.use("/com", createProxyMiddleware({ target: "https://auth-service.vercel.app", changeOrigin: true }));
 //app.use("/game", createProxyMiddleware({ target: "https://game-service.vercel.app", changeOrigin: true }));
-app.use("/ranking", createProxyMiddleware({ target: "https://ranking-microservice.vercel.app/", changeOrigin: true }));
+app.use("/rkn", createProxyMiddleware({ target: "https://ranking-microservice.vercel.app/", changeOrigin: true }));
 
 app.listen(PORT, () => console.log(`API Gateway running on port ${PORT}`));
